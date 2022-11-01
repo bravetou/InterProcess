@@ -1,0 +1,43 @@
+buildscript {
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0' // add plugin
+    }
+}
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.2.2' apply false
+    id 'com.android.library' version '7.2.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 33
+    minSdkVersion = 16
+    targetSdkVersion = 33
+    versionCode = 106
+    versionName = "1.0.6"
+
+    dependencies = [:]
+
+    dependencies.coreKtx = 'androidx.core:core-ktx:1.9.0'
+    dependencies.appcompat = 'androidx.appcompat:appcompat:1.5.1'
+    dependencies.material = 'com.google.android.material:material:1.7.0'
+    dependencies.activityKtx = 'androidx.activity:activity-ktx:1.6.1'
+    dependencies.fragmentKtx = 'androidx.fragment:fragment-ktx:1.5.4'
+    dependencies.multidex = 'androidx.multidex:multidex:2.0.1'
+    dependencies.utilcodex = 'com.blankj:utilcodex:1.31.1'
+    dependencies.constraintlayout = 'androidx.constraintlayout:constraintlayout:2.1.4'
+    dependencies.recyclerview = 'androidx.recyclerview:recyclerview:1.2.1'
+    dependencies.baseRecyclerViewAdapterHelper =
+            'io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.9'
+
+    dependencies.junit = 'junit:junit:4.13.2'
+    dependencies.androidxJunit = 'androidx.test.ext:junit:1.1.3'
+    dependencies.espressoCore = 'androidx.test.espresso:espresso-core:3.4.0'
+}

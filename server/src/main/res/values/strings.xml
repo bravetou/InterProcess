@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">server</string>
+
+    <string name="str_please_enter_name">请输入姓名</string>
+    <string name="str_please_enter_age">请输入年龄</string>
+    <string name="str_man">男</string>
+    <string name="str_women">女</string>
+
+</resources>

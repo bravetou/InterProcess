@@ -22,12 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".service.StudentService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.brave.inter.process.server.service.action" />
+                <action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.MessengerService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.brave.inter.process.server.service.messenger" />
                 <action android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
